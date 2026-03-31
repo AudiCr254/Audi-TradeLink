@@ -48,22 +48,16 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-blue-600 shadow-lg"
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 ml-[5px]">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#D31111] rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">AT</span>
             </div>
-            <span className={`font-bold text-lg lg:text-xl transition-colors ${
-              isScrolled ? 'text-[#0B0D10]' : 'text-white'
-            }`}>
+            <span className="font-bold text-lg lg:text-xl transition-colors text-white">
               Audi TraderLink
             </span>
           </Link>
@@ -72,8 +66,8 @@ export function Navbar() {
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors hover:text-[#D31111] ${
-                isActive('/') ? 'text-[#D31111]' : isScrolled ? 'text-[#0B0D10]' : 'text-white'
+              className={`text-sm font-medium transition-colors hover:text-blue-200 ${
+                isActive('/') ? 'text-blue-200 underline' : 'text-white'
               }`}
             >
               Home
@@ -81,9 +75,7 @@ export function Navbar() {
             
             {/* Categories Dropdown */}
             <div className="relative group">
-              <button className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#D31111] ${
-                isScrolled ? 'text-[#0B0D10]' : 'text-white'
-              }`}>
+              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-blue-200 text-white">
                 Categories
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -107,16 +99,16 @@ export function Navbar() {
 
             <Link
               to="/products"
-              className={`text-sm font-medium transition-colors hover:text-[#D31111] ${
-                isActive('/products') ? 'text-[#D31111]' : isScrolled ? 'text-[#0B0D10]' : 'text-white'
+              className={`text-sm font-medium transition-colors hover:text-blue-200 ${
+                isActive('/products') ? 'text-blue-200 underline' : 'text-white'
               }`}
             >
               Products
             </Link>
             <Link
               to="/suppliers"
-              className={`text-sm font-medium transition-colors hover:text-[#D31111] ${
-                isActive('/suppliers') ? 'text-[#D31111]' : isScrolled ? 'text-[#0B0D10]' : 'text-white'
+              className={`text-sm font-medium transition-colors hover:text-blue-200 ${
+                isActive('/suppliers') ? 'text-blue-200 underline' : 'text-white'
               }`}
             >
               Suppliers
@@ -128,9 +120,7 @@ export function Navbar() {
             {/* Search Toggle */}
             <button
               onClick={() => setShowSearch(!showSearch)}
-              className={`p-2 rounded-lg transition-colors ${
-                isScrolled ? 'hover:bg-gray-100 text-[#0B0D10]' : 'hover:bg-white/10 text-white'
-              }`}
+              className="p-2 rounded-lg transition-colors hover:bg-white/10 text-white"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -138,13 +128,11 @@ export function Navbar() {
             {/* Favorites */}
             <Link
               to="/favorites"
-              className={`relative p-2 rounded-lg transition-colors ${
-                isScrolled ? 'hover:bg-gray-100 text-[#0B0D10]' : 'hover:bg-white/10 text-white'
-              }`}
+              className="relative p-2 rounded-lg transition-colors hover:bg-white/10 text-white"
             >
               <Heart className="w-5 h-5" />
               {favoriteCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#D31111] text-white text-xs rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                   {favoriteCount}
                 </span>
               )}
@@ -153,13 +141,11 @@ export function Navbar() {
             {/* Cart */}
             <Link
               to="/cart"
-              className={`relative p-2 rounded-lg transition-colors ${
-                isScrolled ? 'hover:bg-gray-100 text-[#0B0D10]' : 'hover:bg-white/10 text-white'
-              }`}
+              className="relative p-2 rounded-lg transition-colors hover:bg-white/10 text-white"
             >
               <ShoppingCart className="w-5 h-5" />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#D31111] text-white text-xs rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -191,13 +177,11 @@ export function Navbar() {
             {/* Mobile Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <button
-                  className={`lg:hidden p-2 rounded-lg transition-colors ${
-                    isScrolled ? 'hover:bg-gray-100 text-[#0B0D10]' : 'hover:bg-white/10 text-white'
-                  }`}
-                >
-                  <Menu className="w-5 h-5" />
-                </button>
+                  <button
+                    className="lg:hidden p-2 rounded-lg transition-colors hover:bg-white/10 text-white"
+                  >
+                    <Menu className="w-5 h-5" />
+                  </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] bg-white">
                 <div className="flex flex-col gap-6 mt-8">

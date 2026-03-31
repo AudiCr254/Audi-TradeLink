@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { BackButton } from './components/BackButton';
 import { Home } from './pages/Home';
 import { Products } from './pages/Products';
 import { ProductDetail } from './pages/ProductDetail';
@@ -17,6 +18,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-[#F6F7F9]">
         <Navbar />
+        <BackButton />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
