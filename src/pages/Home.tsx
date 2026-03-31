@@ -154,7 +154,7 @@ export function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-workshop.jpg"
+            src="images/hero-workshop.jpg"
             alt="Industrial workshop"
             className="w-full h-full object-cover"
           />
@@ -271,7 +271,7 @@ export function Home() {
             <div className="spotlight-image relative">
               <div className="aspect-[3/4] rounded-[18px] overflow-hidden shadow-2xl">
                 <img
-                  src="/images/supplier-portrait.jpg"
+                  src="images/supplier-portrait.jpg"
                   alt="Supplier spotlight"
                   className="w-full h-full object-cover"
                 />
@@ -414,7 +414,7 @@ export function Home() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-[18px] overflow-hidden">
                 <img
-                  src="/images/how-it-works-hands.jpg"
+                  src="images/how-it-works-hands.jpg"
                   alt="How it works"
                   className="w-full h-full object-cover"
                 />
