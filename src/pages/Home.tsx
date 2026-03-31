@@ -166,7 +166,7 @@ export function Home() {
             {/* Left Content */}
             <div className="hero-content max-w-xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Find the right part.
+                Audi TradeLink Market Place
               </h1>
               <div className="hero-rule h-0.5 bg-[#D31111] w-3/4 mb-6 origin-left" />
               <p className="text-lg text-gray-300 mb-8">

@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
     <header
-      className="fixed top-4 left-4 right-4 z-50 transition-all duration-300 bg-blue-600 shadow-2xl rounded-2xl border border-blue-500/30"
+      className="fixed top-4 left-4 right-4 z-50 bg-blue-600 shadow-2xl rounded-2xl border border-blue-500/30"
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 ml-[5px]">
         <div className="flex items-center justify-between h-16 lg:h-20">
