@@ -49,7 +49,7 @@ export function Footer() {
             <div className="flex flex-col gap-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                support@auditraderlink.com
+                support.auditradelink@gmail.com
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
