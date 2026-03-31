@@ -7,6 +7,9 @@ import { defineConfig } from "vite"
 export default defineConfig({
   base: '/Audi-TradeLink/',
   plugins: [react()],
+  preview: {
+    allowedHosts: true
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
