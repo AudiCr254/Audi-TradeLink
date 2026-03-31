@@ -180,7 +180,7 @@ export function Home() {
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                  <Button size="lg" variant="outline" className="border-white/30 text-blue-500 hover:bg-white/10">
                     Login
                   </Button>
                 </Link>
