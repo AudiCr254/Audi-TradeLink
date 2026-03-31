@@ -9,6 +9,7 @@ import { Login } from './pages/Login';
 import { Cart } from './pages/Cart';
 import { Favorites } from './pages/Favorites';
 import { Suppliers } from './pages/Suppliers';
+import { Profile } from './pages/Profile';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/suppliers" element={<Suppliers />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
         <Toaster position="top-right" richColors />
